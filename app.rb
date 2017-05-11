@@ -25,12 +25,21 @@ get '/search' do
 end
 
 get '/sign_in' do
-	@email = params[:email]
+
 	@password = params[:password]
-	erb :sign_in
+
+	if @password == "12345678"
+		redirect '/profile'
+	
+	else
+		erb :sign_in
+	
+	end
 end
 
-
+get '/profile' do
+	erb :profile
+end
 
 
 
