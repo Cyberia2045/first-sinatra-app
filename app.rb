@@ -1,13 +1,18 @@
 require 'sinatra'
 
 get '/' do
-	"Hello World"
+	erb :index
 end
 
 get '/about' do
-	"This is another page"
+	@name = "Mateo"
+	erb :about
 end
 
 get '/contact' do
-	"Welcome to the contact page!"
+	erb :contact
+end
+
+get '/posts' do
+	
 end
